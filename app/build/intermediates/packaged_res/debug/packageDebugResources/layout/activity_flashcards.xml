@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="16dp">
+
+    <!-- Flashcard Container -->
+    <FrameLayout
+        android:id="@+id/cardContainer"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Back of Card (English) -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardBack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/cardBackground"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/tvEnglishWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello"
+                    android:textAlignment="center"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvEnglishSentence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Hello! How are you?"
+                    android:textAlignment="center"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="18sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Front of Card (Finnish) -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFront"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/tvFinnishWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hei"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="(Tap to flip)"
+                    android:textColor="#E0E0E0"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvFinnishSentence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Hei! Mitä kuuluu?"
+                    android:textAlignment="center"
+                    android:textColor="#F0F0F0"
+                    android:textSize="18sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <!-- Navigation Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/cardContainer">
+
+        <Button
+            android:id="@+id/btnPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Previous" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Next" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Card 1 of 10"
+        android:textColor="@color/textSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

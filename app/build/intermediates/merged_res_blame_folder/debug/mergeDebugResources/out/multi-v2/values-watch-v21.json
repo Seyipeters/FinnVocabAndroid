@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.finnvocab.app-mergeDebugResources-50:/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Omole Peter\\.gradle\\caches\\transforms-4\\340d1088910f9e89b68e8c7f63659564\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}

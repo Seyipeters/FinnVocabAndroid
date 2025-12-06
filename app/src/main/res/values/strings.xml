@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FinnVocab</string>
+    <string name="word_of_day">Word of the Day</string>
+    <string name="categories">Browse Categories</string>
+    <string name="quiz">Take Quiz</string>
+    <string name="flashcards">Study Flashcards</string>
+    <string name="add_word">Add New Word</string>
+    <string name="grammar">Grammar Guide</string>
+    <string name="total_words">Total Words: %1$d</string>
+</resources>

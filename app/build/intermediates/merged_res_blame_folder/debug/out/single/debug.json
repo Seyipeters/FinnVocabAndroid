@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.finnvocab.app-merged_res-52:/layout_activity_main.xml.flat",
+        "source": "com.finnvocab.app-main-54:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.finnvocab.app-merged_res-52:/layout_activity_add_word.xml.flat",
+        "source": "com.finnvocab.app-main-54:/layout/activity_add_word.xml"
+    },
+    {
+        "merged": "com.finnvocab.app-merged_res-52:/drawable_ic_launcher.xml.flat",
+        "source": "com.finnvocab.app-main-54:/drawable/ic_launcher.xml"
+    },
+    {
+        "merged": "com.finnvocab.app-merged_res-52:/drawable_ic_launcher_round.xml.flat",
+        "source": "com.finnvocab.app-main-54:/drawable/ic_launcher_round.xml"
+    }
+]
