@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="80dp"
+    android:viewportWidth="18"
+    android:viewportHeight="11">
+    
+    <!-- White Background -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,0h18v11h-18z"/>
+        
+    <!-- Blue Cross -->
+    <path
+        android:fillColor="#003580"
+        android:pathData="M5,0h3v11h-3z"/>
+    <path
+        android:fillColor="#003580"
+        android:pathData="M0,4h18v3h-18z"/>
+</vector>

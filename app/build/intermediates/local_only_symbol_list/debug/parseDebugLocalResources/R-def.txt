@@ -5,6 +5,8 @@ animator front_animator
 color accent
 color background
 color black
+color brand_blue
+color brand_yellow
 color cardBackground
 color error_transparent
 color info
@@ -16,10 +18,17 @@ color success_transparent
 color textPrimary
 color textSecondary
 color white
+drawable avd_anim
 drawable ic_check
 drawable ic_close
+drawable ic_flag
 drawable ic_launcher
 drawable ic_launcher_round
+drawable ic_logo
+drawable ic_logo_animated
+drawable ic_logo_static
+drawable ic_logo_text_animated
+drawable launch_screen
 id btnAddWord
 id btnCategories
 id btnNext
@@ -36,10 +45,11 @@ id cardFront
 id categoryInput
 id drawer_layout
 id englishInput
-id feedbackOverlay
+id feedbackPopup
 id finnishInput
 id grammarContentContainer
 id ivFeedbackIcon
+id logoImage
 id nav_about
 id nav_add_word
 id nav_cases
@@ -74,6 +84,7 @@ layout activity_flashcards
 layout activity_grammar
 layout activity_main
 layout activity_quiz
+layout activity_splash
 layout nav_header_main
 menu activity_main_drawer
 string add_word

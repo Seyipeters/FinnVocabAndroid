@@ -5,13 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.finnvocab.app.R;
@@ -36,7 +36,7 @@ public final class ActivityQuizBinding implements ViewBinding {
   public final Button btnOption4;
 
   @NonNull
-  public final FrameLayout feedbackOverlay;
+  public final CardView feedbackPopup;
 
   @NonNull
   public final ImageView ivFeedbackIcon;
@@ -58,7 +58,7 @@ public final class ActivityQuizBinding implements ViewBinding {
 
   private ActivityQuizBinding(@NonNull LinearLayout rootView, @NonNull Button btnOption1,
       @NonNull Button btnOption2, @NonNull Button btnOption3, @NonNull Button btnOption4,
-      @NonNull FrameLayout feedbackOverlay, @NonNull ImageView ivFeedbackIcon,
+      @NonNull CardView feedbackPopup, @NonNull ImageView ivFeedbackIcon,
       @NonNull LinearLayout optionsContainer, @NonNull ProgressBar progressBar,
       @NonNull TextView tvFeedbackText, @NonNull TextView tvProgress,
       @NonNull TextView tvQuestionWord) {
@@ -67,7 +67,7 @@ public final class ActivityQuizBinding implements ViewBinding {
     this.btnOption2 = btnOption2;
     this.btnOption3 = btnOption3;
     this.btnOption4 = btnOption4;
-    this.feedbackOverlay = feedbackOverlay;
+    this.feedbackPopup = feedbackPopup;
     this.ivFeedbackIcon = ivFeedbackIcon;
     this.optionsContainer = optionsContainer;
     this.progressBar = progressBar;
@@ -127,9 +127,9 @@ public final class ActivityQuizBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.feedbackOverlay;
-      FrameLayout feedbackOverlay = ViewBindings.findChildViewById(rootView, id);
-      if (feedbackOverlay == null) {
+      id = R.id.feedbackPopup;
+      CardView feedbackPopup = ViewBindings.findChildViewById(rootView, id);
+      if (feedbackPopup == null) {
         break missingId;
       }
 
@@ -170,8 +170,8 @@ public final class ActivityQuizBinding implements ViewBinding {
       }
 
       return new ActivityQuizBinding((LinearLayout) rootView, btnOption1, btnOption2, btnOption3,
-          btnOption4, feedbackOverlay, ivFeedbackIcon, optionsContainer, progressBar,
-          tvFeedbackText, tvProgress, tvQuestionWord);
+          btnOption4, feedbackPopup, ivFeedbackIcon, optionsContainer, progressBar, tvFeedbackText,
+          tvProgress, tvQuestionWord);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

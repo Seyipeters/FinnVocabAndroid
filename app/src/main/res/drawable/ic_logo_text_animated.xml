@@ -1,0 +1,52 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="200dp"
+            android:height="50dp"
+            android:viewportWidth="200"
+            android:viewportHeight="50">
+            <group android:name="text_group"
+                   android:pivotX="100"
+                   android:pivotY="25">
+                <!-- "FinnVocab" text approximation using paths -->
+                <!-- F -->
+                <path android:fillColor="#FFFFFF" android:pathData="M10,10h15v5h-10v5h8v5h-8v10h-5z"/>
+                <!-- i -->
+                <path android:fillColor="#FFFFFF" android:pathData="M30,15h5v20h-5z M30,10h5v3h-5z"/>
+                <!-- n -->
+                <path android:fillColor="#FFFFFF" android:pathData="M40,15h5v5l10,0v-5h5v20h-5v-10l-10,0v10h-5z"/>
+                <!-- n -->
+                <path android:fillColor="#FFFFFF" android:pathData="M65,15h5v5l10,0v-5h5v20h-5v-10l-10,0v10h-5z"/>
+                <!-- V -->
+                <path android:fillColor="#FFFFFF" android:pathData="M95,10h5l5,20l5,-20h5l-8,25h-4z"/>
+                <!-- o -->
+                <path android:fillColor="#FFFFFF" android:pathData="M120,15h10v20h-10z M125,18v14h1v-14z" />
+                <!-- c -->
+                <path android:fillColor="#FFFFFF" android:pathData="M145,15h-10v20h10v-5h-5v-10h5z"/>
+                <!-- a -->
+                <path android:fillColor="#FFFFFF" android:pathData="M150,15h10v20h-5v-5h-5v5h-5v-10h5v-5h-5z"/>
+                <!-- b -->
+                <path android:fillColor="#FFFFFF" android:pathData="M170,10h5v25h10v-10h-10v-5h10v20h-15z"/>
+            </group>
+        </vector>
+    </aapt:attr>
+    
+    <target android:name="text_group">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="alpha"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:duration="1000"/>
+                <objectAnimator
+                    android:propertyName="translationY"
+                    android:valueFrom="50"
+                    android:valueTo="0"
+                    android:duration="1000"
+                    android:interpolator="@android:interpolator/overshoot"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

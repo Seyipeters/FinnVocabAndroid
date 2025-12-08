@@ -1404,6 +1404,8 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color brand_blue
+color brand_yellow
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -3028,6 +3030,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable avd_anim
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -3054,9 +3057,14 @@ drawable ic_check
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_close
+drawable ic_flag
 drawable ic_keyboard_black_24dp
 drawable ic_launcher
 drawable ic_launcher_round
+drawable ic_logo
+drawable ic_logo_animated
+drawable ic_logo_static
+drawable ic_logo_text_animated
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
@@ -3065,6 +3073,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
+drawable launch_screen
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3340,7 +3349,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
-id feedbackOverlay
+id feedbackPopup
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3402,6 +3411,7 @@ id linear
 id listMode
 id list_item
 id locale
+id logoImage
 id ltr
 id m3_side_sheet
 id marquee
@@ -3813,6 +3823,7 @@ layout activity_flashcards
 layout activity_grammar
 layout activity_main
 layout activity_quiz
+layout activity_splash
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

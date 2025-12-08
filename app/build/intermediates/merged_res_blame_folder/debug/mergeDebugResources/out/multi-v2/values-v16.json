@@ -4,17 +4,7 @@
             "outputFile": "com.finnvocab.app-mergeDebugResources-50:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Omole Peter\\.gradle\\caches\\transforms-4\\2b61053cf2704f459960cd8fc90c01a0\\transformed\\core-1.12.0\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Omole Peter\\.gradle\\caches\\transforms-4\\340d1088910f9e89b68e8c7f63659564\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Omole Peter\\.gradle\\caches\\8.13\\transforms\\6dafb37192497c7d00659be0eab926c6\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Omole Peter\\.gradle\\caches\\8.13\\transforms\\095349438d4a364a17abca21efdc3c73\\transformed\\core-1.12.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]
