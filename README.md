@@ -44,11 +44,9 @@ FinnVocabAndroid/
 
 ## Screenshots
 
-![Menu](https://github.com/user-attachments/assets/89ed7eaf-80c4-4c16-8f86-5ff8fc3be76c)
-
-![Homepage](https://github.com/user-attachments/assets/39676ebf-e006-4f0a-88a3-2c71571cd11c)
-
-![Take Quiz](https://github.com/user-attachments/assets/dcfee534-cab8-4b2c-ab30-7f7dd4125963)
+![Menu](https://github.com/user-attachments/assets/89ed7eaf-80c4-4c16-8f86-5ff8fc3be76c)   
+![Homepage](https://github.com/user-attachments/assets/39676ebf-e006-4f0a-88a3-2c71571cd11c)   
+![Take Quiz](https://github.com/user-attachments/assets/dcfee534-cab8-4b2c-ab30-7f7dd4125963)  
 
 
 
