@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@android:drawable/ic_menu_rotate" />
+        
+        <item
+            android:id="@+id/nav_about"
+            android:title="About FinnVocab"
+            android:icon="@android:drawable/ic_menu_info_details" />
+            
+        <item
+            android:id="@+id/nav_add_word"
+            android:title="Add New Words"
+            android:icon="@android:drawable/ic_menu_add" />
+
+        <item
+            android:id="@+id/nav_quiz"
+            android:title="Take Quiz"
+            android:icon="@android:drawable/ic_menu_help" />
+
+        <item
+            android:id="@+id/nav_categories"
+            android:title="Browse Categories"
+            android:icon="@android:drawable/ic_menu_sort_by_size" />
+    </group>
+
+    <item android:title="Grammar">
+        <menu>
+            <item
+                android:id="@+id/nav_pronouns"
+                android:title="Persoonapronominit ja 'olla' verbi" />
+                
+            <item
+                android:id="@+id/nav_genitive"
+                android:title="Genetiivi (Genitive Case)" />
+
+            <item
+                android:id="@+id/nav_partitive"
+                android:title="Partitiivi (Partitive Case)" />
+
+            <item
+                android:id="@+id/nav_kpt"
+                android:title="K-P-T-vaihtelu (Consonant Gradation)" />
+
+            <item
+                android:id="@+id/nav_verb_types"
+                android:title="Verbityyppi (Verb Types)" />
+
+            <item
+                android:id="@+id/nav_question_words"
+                android:title="Kysymyssanat (Question Words)" />
+
+            <item
+                android:id="@+id/nav_cases"
+                android:title="Finnish Cases Overview" />
+        </menu>
+    </item>
+
+</menu>
