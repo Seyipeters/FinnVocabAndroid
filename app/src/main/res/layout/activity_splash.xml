@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:background="@color/primary">
 
-    <ImageView
-        android:id="@+id/logoImage"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:src="@drawable/ic_logo_animated"
-        android:layout_marginBottom="24dp"/>
+    <!-- Centered FinnVocab Text -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FinnVocab"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"/>
 
-    <ImageView
-        android:id="@+id/textImage"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_logo_text_animated"/>
+    <!-- Copyright Footer -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="© Peter Omole 2025"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:alpha="0.8"/>
 
-</LinearLayout>
+</RelativeLayout>
