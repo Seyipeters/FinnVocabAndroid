@@ -4,20 +4,76 @@ package com.finnvocab.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.finnvocab.app.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityQuizBinding implements ViewBinding {
   @NonNull
   private final LinearLayout rootView;
 
-  private ActivityQuizBinding(@NonNull LinearLayout rootView) {
+  @NonNull
+  public final Button btnOption1;
+
+  @NonNull
+  public final Button btnOption2;
+
+  @NonNull
+  public final Button btnOption3;
+
+  @NonNull
+  public final Button btnOption4;
+
+  @NonNull
+  public final FrameLayout feedbackOverlay;
+
+  @NonNull
+  public final ImageView ivFeedbackIcon;
+
+  @NonNull
+  public final LinearLayout optionsContainer;
+
+  @NonNull
+  public final ProgressBar progressBar;
+
+  @NonNull
+  public final TextView tvFeedbackText;
+
+  @NonNull
+  public final TextView tvProgress;
+
+  @NonNull
+  public final TextView tvQuestionWord;
+
+  private ActivityQuizBinding(@NonNull LinearLayout rootView, @NonNull Button btnOption1,
+      @NonNull Button btnOption2, @NonNull Button btnOption3, @NonNull Button btnOption4,
+      @NonNull FrameLayout feedbackOverlay, @NonNull ImageView ivFeedbackIcon,
+      @NonNull LinearLayout optionsContainer, @NonNull ProgressBar progressBar,
+      @NonNull TextView tvFeedbackText, @NonNull TextView tvProgress,
+      @NonNull TextView tvQuestionWord) {
     this.rootView = rootView;
+    this.btnOption1 = btnOption1;
+    this.btnOption2 = btnOption2;
+    this.btnOption3 = btnOption3;
+    this.btnOption4 = btnOption4;
+    this.feedbackOverlay = feedbackOverlay;
+    this.ivFeedbackIcon = ivFeedbackIcon;
+    this.optionsContainer = optionsContainer;
+    this.progressBar = progressBar;
+    this.tvFeedbackText = tvFeedbackText;
+    this.tvProgress = tvProgress;
+    this.tvQuestionWord = tvQuestionWord;
   }
 
   @Override
@@ -43,10 +99,81 @@ public final class ActivityQuizBinding implements ViewBinding {
 
   @NonNull
   public static ActivityQuizBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.btnOption1;
+      Button btnOption1 = ViewBindings.findChildViewById(rootView, id);
+      if (btnOption1 == null) {
+        break missingId;
+      }
 
-    return new ActivityQuizBinding((LinearLayout) rootView);
+      id = R.id.btnOption2;
+      Button btnOption2 = ViewBindings.findChildViewById(rootView, id);
+      if (btnOption2 == null) {
+        break missingId;
+      }
+
+      id = R.id.btnOption3;
+      Button btnOption3 = ViewBindings.findChildViewById(rootView, id);
+      if (btnOption3 == null) {
+        break missingId;
+      }
+
+      id = R.id.btnOption4;
+      Button btnOption4 = ViewBindings.findChildViewById(rootView, id);
+      if (btnOption4 == null) {
+        break missingId;
+      }
+
+      id = R.id.feedbackOverlay;
+      FrameLayout feedbackOverlay = ViewBindings.findChildViewById(rootView, id);
+      if (feedbackOverlay == null) {
+        break missingId;
+      }
+
+      id = R.id.ivFeedbackIcon;
+      ImageView ivFeedbackIcon = ViewBindings.findChildViewById(rootView, id);
+      if (ivFeedbackIcon == null) {
+        break missingId;
+      }
+
+      id = R.id.optionsContainer;
+      LinearLayout optionsContainer = ViewBindings.findChildViewById(rootView, id);
+      if (optionsContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.progressBar;
+      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
+      id = R.id.tvFeedbackText;
+      TextView tvFeedbackText = ViewBindings.findChildViewById(rootView, id);
+      if (tvFeedbackText == null) {
+        break missingId;
+      }
+
+      id = R.id.tvProgress;
+      TextView tvProgress = ViewBindings.findChildViewById(rootView, id);
+      if (tvProgress == null) {
+        break missingId;
+      }
+
+      id = R.id.tvQuestionWord;
+      TextView tvQuestionWord = ViewBindings.findChildViewById(rootView, id);
+      if (tvQuestionWord == null) {
+        break missingId;
+      }
+
+      return new ActivityQuizBinding((LinearLayout) rootView, btnOption1, btnOption2, btnOption3,
+          btnOption4, feedbackOverlay, ivFeedbackIcon, optionsContainer, progressBar,
+          tvFeedbackText, tvProgress, tvQuestionWord);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

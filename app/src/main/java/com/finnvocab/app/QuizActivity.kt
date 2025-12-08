@@ -5,8 +5,8 @@ import android.animation.AnimatorListenerAdapter
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import android.view.animation.OvershootInterpolator
 import android.widget.Button
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
@@ -35,7 +35,7 @@ class QuizActivity : AppCompatActivity() {
     private lateinit var progressBar: ProgressBar
     private lateinit var tvQuestionWord: TextView
     private lateinit var optionsContainer: LinearLayout
-    private lateinit var feedbackOverlay: FrameLayout
+    private lateinit var feedbackPopup: View
     private lateinit var ivFeedbackIcon: ImageView
     private lateinit var tvFeedbackText: TextView
     
@@ -60,7 +60,7 @@ class QuizActivity : AppCompatActivity() {
         progressBar = findViewById(R.id.progressBar)
         tvQuestionWord = findViewById(R.id.tvQuestionWord)
         optionsContainer = findViewById(R.id.optionsContainer)
-        feedbackOverlay = findViewById(R.id.feedbackOverlay)
+        feedbackPopup = findViewById(R.id.feedbackPopup)
         ivFeedbackIcon = findViewById(R.id.ivFeedbackIcon)
         tvFeedbackText = findViewById(R.id.tvFeedbackText)
 
@@ -140,43 +140,57 @@ class QuizActivity : AppCompatActivity() {
 
         // Wait then move to next question
         lifecycleScope.launch {
-            delay(1500)
+            delay(2000) // Keep popup visible for 2 seconds
             hideFeedback()
+            delay(300) // Wait for fade out
             currentQuestionIndex++
             showNextQuestion()
         }
     }
 
     private fun showFeedback(isCorrect: Boolean) {
-        feedbackOverlay.alpha = 0f
-        feedbackOverlay.visibility = View.VISIBLE
+        // Reset state for animation
+        feedbackPopup.visibility = View.VISIBLE
+        feedbackPopup.alpha = 0f
+        feedbackPopup.scaleX = 0.5f
+        feedbackPopup.scaleY = 0.5f
         
         if (isCorrect) {
-            feedbackOverlay.setBackgroundColor(getColor(R.color.success_transparent)) 
-            ivFeedbackIcon.setImageResource(R.drawable.ic_check) 
-            ivFeedbackIcon.setColorFilter(Color.WHITE)
-            
+            ivFeedbackIcon.setImageResource(R.drawable.ic_check)
+            ivFeedbackIcon.setColorFilter(getColor(R.color.success)) // Green icon
             tvFeedbackText.text = "Correct!"
+            tvFeedbackText.setTextColor(getColor(R.color.success))
         } else {
-            tvFeedbackText.text = "Wrong!\nIt was: ${currentWord.english}"
-            feedbackOverlay.setBackgroundColor(getColor(R.color.error_transparent))
             ivFeedbackIcon.setImageResource(R.drawable.ic_close)
-            ivFeedbackIcon.setColorFilter(Color.WHITE)
+            ivFeedbackIcon.setColorFilter(getColor(R.color.error_transparent)) // Red icon (using error color)
+            // If you don't have a solid error color, use accent or define one. 
+            // Let's use Color.RED or a specific color resource.
+            // Assuming error_transparent is reddish, but better to use a solid color for the icon.
+            ivFeedbackIcon.setColorFilter(Color.RED) 
+            
+            tvFeedbackText.text = "Wrong!\nIt was: ${currentWord.english}"
+            tvFeedbackText.setTextColor(Color.RED)
         }
 
-        feedbackOverlay.animate()
+        // Pop-up animation
+        feedbackPopup.animate()
             .alpha(1f)
-            .setDuration(300)
+            .scaleX(1f)
+            .scaleY(1f)
+            .setDuration(400)
+            .setInterpolator(OvershootInterpolator())
             .start()
     }
 
     private fun hideFeedback() {
-        feedbackOverlay.animate()
+        feedbackPopup.animate()
             .alpha(0f)
+            .scaleX(0.5f)
+            .scaleY(0.5f)
             .setDuration(300)
             .setListener(object : AnimatorListenerAdapter() {
                 override fun onAnimationEnd(animation: Animator) {
-                    feedbackOverlay.visibility = View.GONE
+                    feedbackPopup.visibility = View.GONE
                 }
             })
             .start()

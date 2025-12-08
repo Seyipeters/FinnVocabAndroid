@@ -6,22 +6,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.finnvocab.app.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.navigation.NavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final DrawerLayout rootView;
 
   @NonNull
   public final MaterialButton btnAddWord;
@@ -48,13 +50,22 @@ public final class ActivityMainBinding implements ViewBinding {
   public final CardView cardFront;
 
   @NonNull
+  public final DrawerLayout drawerLayout;
+
+  @NonNull
+  public final NavigationView navView;
+
+  @NonNull
+  public final Toolbar toolbar;
+
+  @NonNull
+  public final TextView tvBackFinnishSentence;
+
+  @NonNull
   public final TextView tvEnglishSentence;
 
   @NonNull
   public final TextView tvEnglishWord;
-
-  @NonNull
-  public final TextView tvFinnishSentence;
 
   @NonNull
   public final TextView tvFinnishWord;
@@ -65,12 +76,13 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextView wordOfDayFinnish;
 
-  private ActivityMainBinding(@NonNull ScrollView rootView, @NonNull MaterialButton btnAddWord,
+  private ActivityMainBinding(@NonNull DrawerLayout rootView, @NonNull MaterialButton btnAddWord,
       @NonNull MaterialButton btnCategories, @NonNull Button btnNext, @NonNull Button btnPrevious,
       @NonNull MaterialButton btnQuiz, @NonNull CardView cardBack,
       @NonNull FrameLayout cardContainer, @NonNull CardView cardFront,
-      @NonNull TextView tvEnglishSentence, @NonNull TextView tvEnglishWord,
-      @NonNull TextView tvFinnishSentence, @NonNull TextView tvFinnishWord,
+      @NonNull DrawerLayout drawerLayout, @NonNull NavigationView navView, @NonNull Toolbar toolbar,
+      @NonNull TextView tvBackFinnishSentence, @NonNull TextView tvEnglishSentence,
+      @NonNull TextView tvEnglishWord, @NonNull TextView tvFinnishWord,
       @NonNull TextView wordOfDayEnglish, @NonNull TextView wordOfDayFinnish) {
     this.rootView = rootView;
     this.btnAddWord = btnAddWord;
@@ -81,9 +93,12 @@ public final class ActivityMainBinding implements ViewBinding {
     this.cardBack = cardBack;
     this.cardContainer = cardContainer;
     this.cardFront = cardFront;
+    this.drawerLayout = drawerLayout;
+    this.navView = navView;
+    this.toolbar = toolbar;
+    this.tvBackFinnishSentence = tvBackFinnishSentence;
     this.tvEnglishSentence = tvEnglishSentence;
     this.tvEnglishWord = tvEnglishWord;
-    this.tvFinnishSentence = tvFinnishSentence;
     this.tvFinnishWord = tvFinnishWord;
     this.wordOfDayEnglish = wordOfDayEnglish;
     this.wordOfDayFinnish = wordOfDayFinnish;
@@ -91,7 +106,7 @@ public final class ActivityMainBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public DrawerLayout getRoot() {
     return rootView;
   }
 
@@ -164,6 +179,26 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      DrawerLayout drawerLayout = (DrawerLayout) rootView;
+
+      id = R.id.nav_view;
+      NavigationView navView = ViewBindings.findChildViewById(rootView, id);
+      if (navView == null) {
+        break missingId;
+      }
+
+      id = R.id.toolbar;
+      Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
+      id = R.id.tvBackFinnishSentence;
+      TextView tvBackFinnishSentence = ViewBindings.findChildViewById(rootView, id);
+      if (tvBackFinnishSentence == null) {
+        break missingId;
+      }
+
       id = R.id.tvEnglishSentence;
       TextView tvEnglishSentence = ViewBindings.findChildViewById(rootView, id);
       if (tvEnglishSentence == null) {
@@ -173,12 +208,6 @@ public final class ActivityMainBinding implements ViewBinding {
       id = R.id.tvEnglishWord;
       TextView tvEnglishWord = ViewBindings.findChildViewById(rootView, id);
       if (tvEnglishWord == null) {
-        break missingId;
-      }
-
-      id = R.id.tvFinnishSentence;
-      TextView tvFinnishSentence = ViewBindings.findChildViewById(rootView, id);
-      if (tvFinnishSentence == null) {
         break missingId;
       }
 
@@ -200,9 +229,10 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ScrollView) rootView, btnAddWord, btnCategories, btnNext,
-          btnPrevious, btnQuiz, cardBack, cardContainer, cardFront, tvEnglishSentence,
-          tvEnglishWord, tvFinnishSentence, tvFinnishWord, wordOfDayEnglish, wordOfDayFinnish);
+      return new ActivityMainBinding((DrawerLayout) rootView, btnAddWord, btnCategories, btnNext,
+          btnPrevious, btnQuiz, cardBack, cardContainer, cardFront, drawerLayout, navView, toolbar,
+          tvBackFinnishSentence, tvEnglishSentence, tvEnglishWord, tvFinnishWord, wordOfDayEnglish,
+          wordOfDayFinnish);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,7 +1,7 @@
 [
     {
-        "merged": "com.finnvocab.app-mergeDebugResources-51:/layout/activity_main.xml",
-        "source": "com.finnvocab.app-main-54:/layout/activity_main.xml"
+        "merged": "com.finnvocab.app-mergeDebugResources-51:/layout/activity_quiz.xml",
+        "source": "com.finnvocab.app-main-54:/layout/activity_quiz.xml"
     },
     {
         "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-mergeDebugResources-51:\\layout\\activity_add_word.xml",
@@ -10,6 +10,10 @@
     {
         "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-mergeDebugResources-51:\\layout\\activity_grammar.xml",
         "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\layout\\activity_grammar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-mergeDebugResources-51:\\layout\\nav_header_main.xml",
+        "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\layout\\nav_header_main.xml"
     },
     {
         "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-mergeDebugResources-51:\\layout\\activity_flashcards.xml",

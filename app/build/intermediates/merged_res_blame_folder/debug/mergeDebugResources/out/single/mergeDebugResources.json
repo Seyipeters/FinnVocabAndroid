@@ -4,20 +4,20 @@
         "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\layout\\activity_quiz.xml"
     },
     {
-        "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-debug-52:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-debug-52:\\menu_activity_main_drawer.xml.flat",
+        "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\menu\\activity_main_drawer.xml"
     },
     {
         "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-debug-52:\\animator_front_animator.xml.flat",
         "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\animator\\front_animator.xml"
     },
     {
-        "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-debug-52:\\drawable_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\drawable\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-debug-52:\\layout_nav_header_main.xml.flat",
+        "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\layout\\nav_header_main.xml"
     },
     {
-        "merged": "com.finnvocab.app-debug-52:/layout_activity_main.xml.flat",
-        "source": "com.finnvocab.app-main-54:/layout/activity_main.xml"
+        "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-debug-52:\\drawable_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\drawable\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-debug-52:\\layout_activity_add_word.xml.flat",
@@ -28,12 +28,24 @@
         "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\layout\\activity_grammar.xml"
     },
     {
-        "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-debug-52:\\layout_activity_categories.xml.flat",
-        "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\layout\\activity_categories.xml"
-    },
-    {
         "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-debug-52:\\drawable_ic_launcher.xml.flat",
         "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\drawable\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-debug-52:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.finnvocab.app-debug-52:/drawable_ic_close.xml.flat",
+        "source": "com.finnvocab.app-main-54:/drawable/ic_close.xml"
+    },
+    {
+        "merged": "com.finnvocab.app-debug-52:/drawable_ic_check.xml.flat",
+        "source": "com.finnvocab.app-main-54:/drawable/ic_check.xml"
+    },
+    {
+        "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-debug-52:\\layout_activity_categories.xml.flat",
+        "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-main-54:\\layout\\activity_categories.xml"
     },
     {
         "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.7\\com.finnvocab.app-debug-52:\\layout_activity_flashcards.xml.flat",

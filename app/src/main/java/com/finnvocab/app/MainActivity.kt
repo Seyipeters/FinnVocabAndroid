@@ -4,20 +4,28 @@ import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.lifecycleScope
+import com.google.android.material.navigation.NavigationView
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var database: WordDatabase
     private lateinit var wordDao: WordDao
+    private lateinit var drawerLayout: DrawerLayout
 
     // Flashcard UI
     private lateinit var frontAnim: AnimatorSet
@@ -30,15 +38,36 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cardFront: CardView
     private lateinit var cardBack: CardView
     private lateinit var tvFinnishWord: TextView
-    private lateinit var tvFinnishSentence: TextView
     private lateinit var tvEnglishWord: TextView
     private lateinit var tvEnglishSentence: TextView
+    private lateinit var tvBackFinnishSentence: TextView
     private lateinit var btnPrevious: Button
     private lateinit var btnNext: Button
+    
+    // UI Elements defined here to be accessible in click listeners
+    private lateinit var btnCategories: Button
+    private lateinit var btnQuiz: Button
+    private lateinit var btnAddWord: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Setup Toolbar
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        // Setup Navigation Drawer
+        drawerLayout = findViewById(R.id.drawer_layout)
+        val navView: NavigationView = findViewById(R.id.nav_view)
+        val toggle = ActionBarDrawerToggle(
+            this, drawerLayout, toolbar, 
+            R.string.navigation_drawer_open, 
+            R.string.navigation_drawer_close
+        )
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+        navView.setNavigationItemSelectedListener(this)
 
         // Initialize database
         database = WordDatabase.getDatabase(this, lifecycleScope)
@@ -84,25 +113,55 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    
-    // UI Elements defined here to be accessible in click listeners
-    private lateinit var btnCategories: Button
-    private lateinit var btnQuiz: Button
-    private lateinit var btnAddWord: Button
+
+    override fun onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nav_home -> {
+                // Already on home
+            }
+            R.id.nav_add_word -> {
+                startActivity(Intent(this, AddWordActivity::class.java))
+            }
+            R.id.nav_quiz -> {
+                startActivity(Intent(this, QuizActivity::class.java))
+            }
+            R.id.nav_categories -> {
+                startActivity(Intent(this, CategoriesActivity::class.java))
+            }
+            R.id.nav_about -> {
+                Toast.makeText(this, "FinnVocab Version 1.0", Toast.LENGTH_SHORT).show()
+            }
+            R.id.nav_pronouns, R.id.nav_genitive, R.id.nav_partitive, 
+            R.id.nav_kpt, R.id.nav_verb_types, R.id.nav_question_words, 
+            R.id.nav_cases -> {
+                val intent = Intent(this, GrammarActivity::class.java)
+                intent.putExtra("GRAMMAR_TOPIC_ID", item.itemId)
+                startActivity(intent)
+            }
+        }
+        drawerLayout.closeDrawer(GravityCompat.START)
+        return true
+    }
 
     private fun initializeViews() {
-        // Word of Day Elements
-        val wordOfDayFinnish: TextView = findViewById(R.id.wordOfDayFinnish)
-        val wordOfDayEnglish: TextView = findViewById(R.id.wordOfDayEnglish)
-
         // Flashcard Elements
         cardContainer = findViewById(R.id.cardContainer)
         cardFront = findViewById(R.id.cardFront)
         cardBack = findViewById(R.id.cardBack)
         tvFinnishWord = findViewById(R.id.tvFinnishWord)
-        tvFinnishSentence = findViewById(R.id.tvFinnishSentence)
+        
         tvEnglishWord = findViewById(R.id.tvEnglishWord)
         tvEnglishSentence = findViewById(R.id.tvEnglishSentence)
+        tvBackFinnishSentence = findViewById(R.id.tvBackFinnishSentence)
+        
         btnPrevious = findViewById(R.id.btnPrevious)
         btnNext = findViewById(R.id.btnNext)
         
@@ -142,7 +201,6 @@ class MainActivity : AppCompatActivity() {
                 updateCardContent()
             } else {
                 tvFinnishWord.text = "No words found"
-                tvFinnishSentence.text = ""
                 tvEnglishWord.text = "Add words first"
                 tvEnglishSentence.text = ""
                 btnNext.isEnabled = false
@@ -157,10 +215,12 @@ class MainActivity : AppCompatActivity() {
         
         val currentWord = flashcardWords[currentCardIndex]
         
+        // Front: Only Finnish Word
         tvFinnishWord.text = currentWord.finnish
-        tvFinnishSentence.text = currentWord.sentence
         
+        // Back: English Word, Finnish Sentence, English Sentence
         tvEnglishWord.text = currentWord.english
+        tvBackFinnishSentence.text = currentWord.sentence
         tvEnglishSentence.text = currentWord.sentenceEnglish.ifEmpty { "No translation available" }
         
         btnPrevious.isEnabled = currentCardIndex > 0
