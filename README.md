@@ -2,6 +2,24 @@
 
 A simple and effective Android application for learning Finnish vocabulary through interactive flashcards, quizzes, and a detailed grammar guide.
 
+## About This Project
+
+### The Story Behind FinnVocab
+
+FinnVocab was born from a real-world need to learn a new language while balancing a busy life.
+
+As an international student working in a kitchen where Finnish was predominantly spoken, I initially struggled to keep up with formal language courses. After unenrolling, I began learning organically by picking up words and phrases from conversations around me. I would ask for their meanings, document them, and soon realized I was learning more effectively this way. This personal journey of collecting vocabulary word-by-word inspired the creation of FinnVocab—an app designed to help you build your own personal dictionary and learn at your own pace.
+
+### About the Developer
+
+![Omole Peter Mayowa](https://i.imgur.com/9C0f0fW.jpg)
+
+My name is **Omole Peter Mayowa**, a 33-year-old International Student in Finland, currently studying IT with a specialization in Cloud-based Data Engineering. This project is a fusion of my passion for technology and my personal journey with the Finnish language.
+
+### Special Thanks
+
+This app would not have been possible without the encouragement of my lecturer, **Osman**, who helped me see the potential in this idea. A special thank you also goes to my wife, a dedicated student at a Finnish language school, whose support was invaluable during the development of this app.
+
 ## Features
 
 - [x] **Interactive Flashcards**: Study vocabulary with a flippable card interface directly on the home screen.

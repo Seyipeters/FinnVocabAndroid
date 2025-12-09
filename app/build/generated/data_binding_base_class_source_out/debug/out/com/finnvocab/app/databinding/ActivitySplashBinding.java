@@ -4,8 +4,8 @@ package com.finnvocab.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -17,19 +17,19 @@ import java.lang.String;
 
 public final class ActivitySplashBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
-  public final ImageView logoImage;
+  public final TextView tvTitle;
 
-  private ActivitySplashBinding(@NonNull FrameLayout rootView, @NonNull ImageView logoImage) {
+  private ActivitySplashBinding(@NonNull RelativeLayout rootView, @NonNull TextView tvTitle) {
     this.rootView = rootView;
-    this.logoImage = logoImage;
+    this.tvTitle = tvTitle;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -54,13 +54,13 @@ public final class ActivitySplashBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.logoImage;
-      ImageView logoImage = ViewBindings.findChildViewById(rootView, id);
-      if (logoImage == null) {
+      id = R.id.tvTitle;
+      TextView tvTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvTitle == null) {
         break missingId;
       }
 
-      return new ActivitySplashBinding((FrameLayout) rootView, logoImage);
+      return new ActivitySplashBinding((RelativeLayout) rootView, tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

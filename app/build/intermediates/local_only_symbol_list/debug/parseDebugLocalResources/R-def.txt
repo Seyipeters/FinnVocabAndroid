@@ -29,6 +29,7 @@ drawable ic_logo_animated
 drawable ic_logo_static
 drawable ic_logo_text_animated
 drawable launch_screen
+drawable profile_pic
 id btnAddWord
 id btnCategories
 id btnNext
@@ -49,7 +50,6 @@ id feedbackPopup
 id finnishInput
 id grammarContentContainer
 id ivFeedbackIcon
-id logoImage
 id nav_about
 id nav_add_word
 id nav_cases
@@ -68,6 +68,7 @@ id progressBar
 id sentenceEnglishInput
 id sentenceInput
 id toolbar
+id toolbar_about
 id tvBackFinnishSentence
 id tvEnglishSentence
 id tvEnglishWord
@@ -76,8 +77,10 @@ id tvFinnishSentence
 id tvFinnishWord
 id tvProgress
 id tvQuestionWord
+id tvTitle
 id wordOfDayEnglish
 id wordOfDayFinnish
+layout activity_about
 layout activity_add_word
 layout activity_categories
 layout activity_flashcards
@@ -97,4 +100,5 @@ string navigation_drawer_open
 string quiz
 string total_words
 string word_of_day
+style ShapeAppearance.App.CircleImageView
 style Theme.FinnVocab

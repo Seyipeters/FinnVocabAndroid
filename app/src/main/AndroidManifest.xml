@@ -27,6 +27,7 @@
         <activity android:name=".AddWordActivity" />
         <activity android:name=".FlashcardsActivity" />
         <activity android:name=".GrammarActivity" />
+        <activity android:name=".AboutActivity" />
         
     </application>
 

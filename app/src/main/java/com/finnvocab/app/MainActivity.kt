@@ -137,7 +137,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(Intent(this, CategoriesActivity::class.java))
             }
             R.id.nav_about -> {
-                Toast.makeText(this, "FinnVocab Version 1.0", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, AboutActivity::class.java))
             }
             R.id.nav_pronouns, R.id.nav_genitive, R.id.nav_partitive, 
             R.id.nav_kpt, R.id.nav_verb_types, R.id.nav_question_words, 

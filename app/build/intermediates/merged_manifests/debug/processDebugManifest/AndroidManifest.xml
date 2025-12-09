@@ -43,6 +43,7 @@
         <activity android:name="com.finnvocab.app.AddWordActivity" />
         <activity android:name="com.finnvocab.app.FlashcardsActivity" />
         <activity android:name="com.finnvocab.app.GrammarActivity" />
+        <activity android:name="com.finnvocab.app.AboutActivity" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

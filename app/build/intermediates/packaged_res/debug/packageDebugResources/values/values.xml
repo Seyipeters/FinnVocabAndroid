@@ -26,6 +26,10 @@
     <string name="quiz">Take Quiz</string>
     <string name="total_words">Total Words: %1$d</string>
     <string name="word_of_day">Word of the Day</string>
+    <style name="ShapeAppearance.App.CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
     <style name="Theme.FinnVocab" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
