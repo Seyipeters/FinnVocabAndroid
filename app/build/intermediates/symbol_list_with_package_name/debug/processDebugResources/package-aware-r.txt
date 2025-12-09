@@ -3057,6 +3057,8 @@ drawable ic_check
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_close
+drawable ic_expand_less
+drawable ic_expand_more
 drawable ic_flag
 drawable ic_keyboard_black_24dp
 drawable ic_launcher
@@ -3064,7 +3066,6 @@ drawable ic_launcher_round
 drawable ic_logo
 drawable ic_logo_animated
 drawable ic_logo_static
-drawable ic_logo_text_animated
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
@@ -3267,6 +3268,7 @@ id cardBack
 id cardContainer
 id cardFront
 id carryVelocity
+id categoriesRecyclerView
 id categoryAutoComplete
 id categoryInputLayout
 id center
@@ -3399,6 +3401,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id ivExpandIcon
 id ivFeedbackIcon
 id jumpToEnd
 id jumpToStart
@@ -3654,7 +3657,6 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
-id themeSwitch
 id time
 id title
 id titleDividerNoCustom
@@ -3662,6 +3664,7 @@ id title_template
 id toggle
 id toolbar
 id toolbar_about
+id toolbar_categories
 id top
 id topPanel
 id touch_outside
@@ -3674,6 +3677,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvBackFinnishSentence
+id tvCategoryName
 id tvEnglishSentence
 id tvEnglishWord
 id tvFeedbackText
@@ -3848,6 +3852,8 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_category_header
+layout item_word
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

@@ -17,7 +17,6 @@ import androidx.viewbinding.ViewBindings;
 import com.finnvocab.app.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.switchmaterial.SwitchMaterial;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -57,9 +56,6 @@ public final class ActivityMainBinding implements ViewBinding {
   public final NavigationView navView;
 
   @NonNull
-  public final SwitchMaterial themeSwitch;
-
-  @NonNull
   public final Toolbar toolbar;
 
   @NonNull
@@ -84,8 +80,7 @@ public final class ActivityMainBinding implements ViewBinding {
       @NonNull MaterialButton btnCategories, @NonNull Button btnNext, @NonNull Button btnPrevious,
       @NonNull MaterialButton btnQuiz, @NonNull CardView cardBack,
       @NonNull FrameLayout cardContainer, @NonNull CardView cardFront,
-      @NonNull DrawerLayout drawerLayout, @NonNull NavigationView navView,
-      @NonNull SwitchMaterial themeSwitch, @NonNull Toolbar toolbar,
+      @NonNull DrawerLayout drawerLayout, @NonNull NavigationView navView, @NonNull Toolbar toolbar,
       @NonNull TextView tvBackFinnishSentence, @NonNull TextView tvEnglishSentence,
       @NonNull TextView tvEnglishWord, @NonNull TextView tvFinnishWord,
       @NonNull TextView wordOfDayEnglish, @NonNull TextView wordOfDayFinnish) {
@@ -100,7 +95,6 @@ public final class ActivityMainBinding implements ViewBinding {
     this.cardFront = cardFront;
     this.drawerLayout = drawerLayout;
     this.navView = navView;
-    this.themeSwitch = themeSwitch;
     this.toolbar = toolbar;
     this.tvBackFinnishSentence = tvBackFinnishSentence;
     this.tvEnglishSentence = tvEnglishSentence;
@@ -193,12 +187,6 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.themeSwitch;
-      SwitchMaterial themeSwitch = ViewBindings.findChildViewById(rootView, id);
-      if (themeSwitch == null) {
-        break missingId;
-      }
-
       id = R.id.toolbar;
       Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
       if (toolbar == null) {
@@ -242,9 +230,9 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((DrawerLayout) rootView, btnAddWord, btnCategories, btnNext,
-          btnPrevious, btnQuiz, cardBack, cardContainer, cardFront, drawerLayout, navView,
-          themeSwitch, toolbar, tvBackFinnishSentence, tvEnglishSentence, tvEnglishWord,
-          tvFinnishWord, wordOfDayEnglish, wordOfDayFinnish);
+          btnPrevious, btnQuiz, cardBack, cardContainer, cardFront, drawerLayout, navView, toolbar,
+          tvBackFinnishSentence, tvEnglishSentence, tvEnglishWord, tvFinnishWord, wordOfDayEnglish,
+          wordOfDayFinnish);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

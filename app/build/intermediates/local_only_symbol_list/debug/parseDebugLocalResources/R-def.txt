@@ -21,13 +21,14 @@ color white
 drawable avd_anim
 drawable ic_check
 drawable ic_close
+drawable ic_expand_less
+drawable ic_expand_more
 drawable ic_flag
 drawable ic_launcher
 drawable ic_launcher_round
 drawable ic_logo
 drawable ic_logo_animated
 drawable ic_logo_static
-drawable ic_logo_text_animated
 drawable launch_screen
 drawable profile_pic
 id btnAddWord
@@ -43,6 +44,7 @@ id btnSave
 id cardBack
 id cardContainer
 id cardFront
+id categoriesRecyclerView
 id categoryAutoComplete
 id categoryInputLayout
 id drawer_layout
@@ -50,6 +52,7 @@ id englishInput
 id feedbackPopup
 id finnishInput
 id grammarContentContainer
+id ivExpandIcon
 id ivFeedbackIcon
 id nav_about
 id nav_add_word
@@ -69,10 +72,11 @@ id optionsContainer
 id progressBar
 id sentenceEnglishInput
 id sentenceInput
-id themeSwitch
 id toolbar
 id toolbar_about
+id toolbar_categories
 id tvBackFinnishSentence
+id tvCategoryName
 id tvEnglishSentence
 id tvEnglishWord
 id tvFeedbackText
@@ -91,6 +95,8 @@ layout activity_grammar
 layout activity_main
 layout activity_quiz
 layout activity_splash
+layout item_category_header
+layout item_word
 layout nav_header_main
 menu activity_main_drawer
 string add_word
