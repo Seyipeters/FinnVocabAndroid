@@ -28,16 +28,15 @@
         android:testOnly="true"
         android:theme="@style/Theme.FinnVocab" >
         <activity
-            android:name="com.finnvocab.app.SplashActivity"
-            android:exported="true"
-            android:theme="@style/Theme.FinnVocab" >
+            android:name="com.finnvocab.app.MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.finnvocab.app.MainActivity" />
+        <activity android:name="com.finnvocab.app.SplashActivity" />
         <activity android:name="com.finnvocab.app.CategoriesActivity" />
         <activity android:name="com.finnvocab.app.QuizActivity" />
         <activity android:name="com.finnvocab.app.AddWordActivity" />

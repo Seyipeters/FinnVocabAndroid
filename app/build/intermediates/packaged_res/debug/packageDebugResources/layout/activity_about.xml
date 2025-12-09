@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white"> <!-- Set background to white -->
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_about"
@@ -38,7 +39,8 @@
                 android:layout_marginTop="8dp"
                 android:lineSpacingMultiplier="1.2"
                 android:textSize="16sp"
-                android:text="FinnVocab was born from a real-world need to learn a new language while balancing a busy life. As an international student working in a kitchen where Finnish was predominantly spoken, I initially struggled to keep up with formal language courses. After unenrolling, I began learning organically by picking up words and phrases from conversations around me. I would ask for their meanings, document them, and soon realized I was learning more effectively this way. This personal journey of collecting vocabulary word-by-word inspired the creation of FinnVocab—an app designed to help you build your own personal dictionary and learn at your own pace."/>
+                android:textColor="@color/black" 
+                android:text="FinnVocab was born from a real-world need to learn a new language while balancing a busy life. As an international student working in a kitchen where Finnish was predominantly spoken, I initially found it challenging to keep up with my language classes. After taking a pause from language class, I began learning organically by picking up words and phrases from conversations around me. I would ask for their meanings, document them, and soon realized I was learning more effectively this way. This personal journey of collecting vocabulary word-by-word inspired the creation of FinnVocab—an app designed to help you build your own personal dictionary and learn at your own pace."/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -72,7 +74,8 @@
                     android:layout_weight="1"
                     android:lineSpacingMultiplier="1.2"
                     android:textSize="16sp"
-                    android:text="My name is Omole Peter Mayowa, a 33-year-old International Student in Finland, currently studying IT with a specialization in Cloud-based Data Engineering."/>
+                    android:textColor="@color/black"
+                    android:text="My name is Omole Peter Mayowa, a Nigerian and an International Student at Savonia UAS, Finland, currently studying IT with a specialization in Cloud-based Data Engineering."/>
 
             </LinearLayout>
 
@@ -91,6 +94,7 @@
                 android:layout_marginTop="8dp"
                 android:lineSpacingMultiplier="1.2"
                 android:textSize="16sp"
+                android:textColor="@color/black"
                 android:text="This app would not have been possible without the encouragement of my lecturer, Osman, who helped me see the potential in this idea. A special thank you also goes to my wife, a dedicated student at a Finnish language school, whose support was invaluable during the development of this app."/>
 
         </LinearLayout>

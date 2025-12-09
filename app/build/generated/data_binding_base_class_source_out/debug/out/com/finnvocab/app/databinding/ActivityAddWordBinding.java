@@ -4,6 +4,7 @@ package com.finnvocab.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AutoCompleteTextView;
 import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,6 +13,7 @@ import androidx.viewbinding.ViewBindings;
 import com.finnvocab.app.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -24,7 +26,10 @@ public final class ActivityAddWordBinding implements ViewBinding {
   public final MaterialButton btnSave;
 
   @NonNull
-  public final TextInputEditText categoryInput;
+  public final AutoCompleteTextView categoryAutoComplete;
+
+  @NonNull
+  public final TextInputLayout categoryInputLayout;
 
   @NonNull
   public final TextInputEditText englishInput;
@@ -39,12 +44,14 @@ public final class ActivityAddWordBinding implements ViewBinding {
   public final TextInputEditText sentenceInput;
 
   private ActivityAddWordBinding(@NonNull ScrollView rootView, @NonNull MaterialButton btnSave,
-      @NonNull TextInputEditText categoryInput, @NonNull TextInputEditText englishInput,
+      @NonNull AutoCompleteTextView categoryAutoComplete,
+      @NonNull TextInputLayout categoryInputLayout, @NonNull TextInputEditText englishInput,
       @NonNull TextInputEditText finnishInput, @NonNull TextInputEditText sentenceEnglishInput,
       @NonNull TextInputEditText sentenceInput) {
     this.rootView = rootView;
     this.btnSave = btnSave;
-    this.categoryInput = categoryInput;
+    this.categoryAutoComplete = categoryAutoComplete;
+    this.categoryInputLayout = categoryInputLayout;
     this.englishInput = englishInput;
     this.finnishInput = finnishInput;
     this.sentenceEnglishInput = sentenceEnglishInput;
@@ -84,9 +91,15 @@ public final class ActivityAddWordBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.categoryInput;
-      TextInputEditText categoryInput = ViewBindings.findChildViewById(rootView, id);
-      if (categoryInput == null) {
+      id = R.id.categoryAutoComplete;
+      AutoCompleteTextView categoryAutoComplete = ViewBindings.findChildViewById(rootView, id);
+      if (categoryAutoComplete == null) {
+        break missingId;
+      }
+
+      id = R.id.categoryInputLayout;
+      TextInputLayout categoryInputLayout = ViewBindings.findChildViewById(rootView, id);
+      if (categoryInputLayout == null) {
         break missingId;
       }
 
@@ -114,8 +127,8 @@ public final class ActivityAddWordBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityAddWordBinding((ScrollView) rootView, btnSave, categoryInput, englishInput,
-          finnishInput, sentenceEnglishInput, sentenceInput);
+      return new ActivityAddWordBinding((ScrollView) rootView, btnSave, categoryAutoComplete,
+          categoryInputLayout, englishInput, finnishInput, sentenceEnglishInput, sentenceInput);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

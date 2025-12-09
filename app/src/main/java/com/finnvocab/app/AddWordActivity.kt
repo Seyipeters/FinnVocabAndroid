@@ -1,11 +1,14 @@
 package com.finnvocab.app
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 class AddWordActivity : AppCompatActivity() {
@@ -25,15 +28,18 @@ class AddWordActivity : AppCompatActivity() {
 
         val finnishInput: EditText = findViewById(R.id.finnishInput)
         val englishInput: EditText = findViewById(R.id.englishInput)
-        val categoryInput: EditText = findViewById(R.id.categoryInput)
+        val categoryAutoComplete: AutoCompleteTextView = findViewById(R.id.categoryAutoComplete)
         val sentenceInput: EditText = findViewById(R.id.sentenceInput)
         val sentenceEnglishInput: EditText = findViewById(R.id.sentenceEnglishInput)
         val btnSave: Button = findViewById(R.id.btnSave)
 
+        // Fetch categories and set up the adapter
+        setupCategoryAutocomplete(categoryAutoComplete)
+
         btnSave.setOnClickListener {
             val finnish = finnishInput.text.toString().trim()
             val english = englishInput.text.toString().trim()
-            val category = categoryInput.text.toString().trim().ifEmpty { "Custom" }
+            val category = categoryAutoComplete.text.toString().trim().ifEmpty { "Custom" }
             val sentence = sentenceInput.text.toString().trim()
             val sentenceEnglish = sentenceEnglishInput.text.toString().trim()
 
@@ -55,6 +61,14 @@ class AddWordActivity : AppCompatActivity() {
                 Toast.makeText(this@AddWordActivity, "Word added!", Toast.LENGTH_SHORT).show()
                 finish()
             }
+        }
+    }
+
+    private fun setupCategoryAutocomplete(autoCompleteTextView: AutoCompleteTextView) {
+        lifecycleScope.launch {
+            val categories = wordDao.getAllCategories().first()
+            val adapter = ArrayAdapter(this@AddWordActivity, android.R.layout.simple_dropdown_item_1line, categories)
+            autoCompleteTextView.setAdapter(adapter)
         }
     }
 

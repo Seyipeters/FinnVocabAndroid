@@ -3266,7 +3266,8 @@ int id cardBack 0x7f080071
 int id cardContainer 0x7f080072
 int id cardFront 0x7f080073
 int id carryVelocity 0x7f080074
-int id categoryInput 0x7f080075
+int id categoryAutoComplete 0x7f08022d
+int id categoryInputLayout 0x7f08022e
 int id center 0x7f080076
 int id centerCrop 0x7f080077
 int id centerInside 0x7f080078
@@ -3485,6 +3486,7 @@ int id nav_partitive 0x7f08014c
 int id nav_pronouns 0x7f08014d
 int id nav_question_words 0x7f08014e
 int id nav_quiz 0x7f08014f
+int id nav_theme 0x7f08022b
 int id nav_verb_types 0x7f080150
 int id nav_view 0x7f080151
 int id navigation_bar_item_active_indicator_view 0x7f080152
@@ -3651,6 +3653,7 @@ int id textinput_helper_text 0x7f0801f2
 int id textinput_placeholder 0x7f0801f3
 int id textinput_prefix_text 0x7f0801f4
 int id textinput_suffix_text 0x7f0801f5
+int id themeSwitch 0x7f08022c
 int id time 0x7f0801f6
 int id title 0x7f0801f7
 int id titleDividerNoCustom 0x7f0801f8

@@ -24,12 +24,12 @@
         "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-main-54:\\drawable\\launch_screen.xml"
     },
     {
-        "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-debug-52:\\drawable_profile_pic.jpg.flat",
-        "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-main-54:\\drawable\\profile_pic.jpg"
-    },
-    {
         "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-debug-52:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-main-54:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-debug-52:\\drawable_profile_pic.jpg.flat",
+        "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-main-54:\\drawable\\profile_pic.jpg"
     },
     {
         "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-debug-52:\\layout_activity_categories.xml.flat",
@@ -38,10 +38,6 @@
     {
         "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-debug-52:\\layout_activity_add_word.xml.flat",
         "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-main-54:\\layout\\activity_add_word.xml"
-    },
-    {
-        "merged": "com.finnvocab.app-debug-52:/layout_activity_about.xml.flat",
-        "source": "com.finnvocab.app-main-54:/layout/activity_about.xml"
     },
     {
         "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-debug-52:\\layout_nav_header_main.xml.flat",
@@ -86,6 +82,10 @@
     {
         "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-debug-52:\\drawable_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-main-54:\\drawable\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.finnvocab.app-debug-52:/layout_activity_add_word.xml.flat",
+        "source": "com.finnvocab.app-main-54:/layout/activity_add_word.xml"
     },
     {
         "merged": "C:\\Users\\Omole Peter\\.gradle\\daemon\\8.13\\com.finnvocab.app-debug-52:\\drawable_ic_flag.xml.flat",

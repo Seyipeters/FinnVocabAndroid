@@ -12,16 +12,15 @@
         android:theme="@style/Theme.FinnVocab">
         
         <activity
-            android:name=".SplashActivity"
-            android:exported="true"
-            android:theme="@style/Theme.FinnVocab">
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashActivity" />
         <activity android:name=".CategoriesActivity" />
         <activity android:name=".QuizActivity" />
         <activity android:name=".AddWordActivity" />
