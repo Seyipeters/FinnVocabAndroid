@@ -12,7 +12,8 @@ As an international student working in a kitchen where Finnish was predominantly
 
 ### About the Developer
 
-![Omole Peter Mayowa](https://i.imgur.com/9C0f0fW.jpg)
+![WhatsApp Image 2024-09-02 at 09 52 54_e9e96715](https://github.com/user-attachments/assets/f73387cc-beaa-4b42-a23b-411553d1460e)
+
 
 My name is **Omole Peter Mayowa**, a 33-year-old International Student in Finland, currently studying IT with a specialization in Cloud-based Data Engineering. This project is a fusion of my passion for technology and my personal journey with the Finnish language.
 
